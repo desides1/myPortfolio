@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['index.html'],
+  content: ['./view/**/*.{html,js}', './node_modules/flowbite/**/*.js'],
+
   theme: {
     container: {
       center: true,
@@ -8,14 +9,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#14b8a6',
+        primary: '#F1C21B',
         secondary: '#64748b',
-        dark: '#0f172a',
+        dark: '#0E0B0B',
       },
       screens: {
         '2xl': '1320px',
       },
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };
