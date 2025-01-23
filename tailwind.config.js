@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ['./view/**/*.{html,js}', './node_modules/flowbite/**/*.js', 'index.html'],
+  content: ['./view/**/*.{html,js}', './node_modules/flowbite/**/*.js', 'index.html', 'view/ui-ux.html'],
 
   theme: {
     container: {
@@ -15,6 +16,7 @@ module.exports = {
       },
       screens: {
         '2xl': '1320px',
+        card: '600px',
       },
       animation: {
         'loop-scroll': 'loop-scroll 50s linear infinite',
@@ -27,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('@tailwindcss/line-clamp')],
 };
