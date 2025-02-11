@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../src/tailwind.min.css" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" /> -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
   </head>
   <body class="bg-white text-gray-900">
     <!-- Description Section -->
@@ -44,14 +45,30 @@
         <div class="flex flex-wrap">
           <div class="w-full h-full py-4 px-2 lg:w-1/2 xl:w-1/3">
             <div class="bg-white mix-h-card rounded-3xl shadow-md hover:shadow-2xl max-w-sm">
-              <div class="rounded-t-3xl overflow-hidden h-64 bg-gray-100">
-                <img class="h-auto max-w-full w-full" src="../dist/img/Ayo Curhat.png" alt="Ayo Curhat" width="w-full" />
+              <div class="relative rounded-t-3xl overflow-hidden h-64 bg-gray-100 flex cursor-pointer" data-dialog-target="image-dialog-1">
+                <img class="h-auto max-w-full w-full object-cover" src="../dist/img/Ayo Curhat.png" alt="Ayo Curhat" width="w-full" />
               </div>
+
+              <!-- Modal -->
+              <div
+                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+                data-dialog-backdrop="image-dialog-1"
+                data-dialog-backdrop-close="true">
+                <div class="flex items-center justify-center rounded-lg relative bg-white shadow-xl w-3/4 m-2 max-h-screen" role="dialog" data-dialog="image-dialog-1">
+                  <div class="prose max-w-screen p-6 overflow-y-auto no-scrollbar" style="max-height: 90vh; border-radius: 0.375rem">
+                    <!-- <div class="border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 mb-4">
+                      <embed src="../dist/Slide 16_9 - 1 (2).pdf" class="w-full object-center" style="width: 150vh; height: 80vh;" alt=""></embed>
+                    </div> -->
+                    <div class="border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 mb-4">
+                      <img src="../dist/img/ux/ayocurhat/Frame 645.png" class="w-full object-cover object-center" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end modal -->
               <div class="pb-6 px-6">
                 <h2 class="text-xl font-bold mb-2 pt-4">Ayo Curhat</h2>
-
                 <p class="font-sans text-base text-secondary mb-2 line-clamp-2">Ayo Curhat merupakan aplikasi berbasis website pelayanan pengaduan kekerasan seksual untuk mahasiswa maupun pegawai di Politeknik Negeri Banyuwangi</p>
-
                 <div class="flex justify-end my-4">
                   <a
                     href="https://www.figma.com/design/1GT34yASJzy9kVqQVlNMpj/AYO-CURHAT?node-id=0-1&t=CtGVYzjIf8cmW6ya-1"
@@ -66,11 +83,26 @@
               </div>
             </div>
           </div>
+
           <div class="w-full py-4 px-2 lg:w-1/2 xl:w-1/3">
             <div class="bg-white mix-h-card rounded-3xl hover:shadow-2xl shadow-sm max-w-sm">
-              <div class="rounded-t-3xl overflow-hidden h-64">
-                <img class="h-auto max-w-full w-full object-cover scale-100" src="../dist/img/Movie theater-min.png" alt="Movie Theater" width="w-full" />
+              <div class="rounded-t-3xl overflow-hidden h-64" data-dialog-target="image-dialog-2">
+                <img class="h-auto max-w-full w-full object-cover" src="../dist/img/Movie theater-min.png" alt="Movie Theater" width="w-full" />
               </div>
+              <!-- Modal -->
+              <div
+                class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+                data-dialog-backdrop="image-dialog-2"
+                data-dialog-backdrop-close="true">
+                <div class="flex items-center justify-center rounded-lg relative bg-white shadow-xl w-3/4 m-2 max-h-screen" role="dialog" data-dialog="image-dialog-2">
+                  <div class="prose max-w-screen p-6 overflow-y-auto no-scrollbar" style="max-height: 90vh; border-radius: 0.375rem">
+                    <div class="border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 mb-4">
+                      <img src="../dist/img/ux/movietheater/Frame 646.png" class="w-full object-cover object-center" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end modal -->
               <div class="pb-6 px-6">
                 <h3 class="text-xl font-bold mb-2 pt-4">Movie Theater</h3>
                 <p class="font-sans text-base text-secondary line-clamp-2">
@@ -210,61 +242,13 @@
       </div>
     </section>
 
-    <!-- Detail Section -->
-    <section>
-      <!-- <button
-        type="button"
-        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-        aria-haspopup="dialog"
-        aria-expanded="false"
-        aria-controls="hs-full-screen-modal"
-        data-hs-overlay="#hs-full-screen-modal">
-        Full screen
-      </button> -->
-
-      <!-- <div id="hs-full-screen-modal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-full-screen-label">
-        <div class="hs-overlay-open:mt-0 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-10 opacity-0 transition-all max-w-full max-h-full h-full">
-          <div class="flex flex-col bg-white pointer-events-auto max-w-full max-h-full h-full dark:bg-neutral-800">
-            <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
-              <h3 id="hs-full-screen-label" class="font-bold text-gray-800 dark:text-white">Modal title</h3>
-              <button
-                type="button"
-                class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600"
-                aria-label="Close"
-                data-hs-overlay="#hs-full-screen-modal">
-                <span class="sr-only">Close</span>
-                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 6 6 18"></path>
-                  <path d="m6 6 12 12"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-y-auto">
-              <p class="mt-1 text-gray-800 dark:text-neutral-400">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="flex justify-end items-center gap-x-2 py-3 px-4 mt-auto border-t dark:border-neutral-700">
-              <button
-                type="button"
-                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                data-hs-overlay="#hs-full-screen-modal">
-                Close
-              </button>
-              <button
-                type="button"
-                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section>
-
     <footer class="bg-white shadow mt-8">
       <div class="container mx-auto px-4 py-6">
         <p class="text-center text-lg">&copy; 2024 My Portfolio</p>
       </div>
     </footer>
     <script src="../../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
+    <script></script>
   </body>
 </html>

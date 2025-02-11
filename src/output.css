@@ -2133,6 +2133,10 @@ input:checked + .toggle-bg {
 .overflow-x-auto {
   overflow-x: auto;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 .overflow-y-auto {
   overflow-y: auto;
 }
